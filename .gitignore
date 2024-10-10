@@ -1,2 +1,2 @@
-docker/desafio_nginx_node/app/node_modules
-docker/desafio_nginx_node/mysql
+/desafio_nginx_node/app/node_modules
+/desafio_nginx_node/mysql
