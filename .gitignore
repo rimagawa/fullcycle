@@ -1,2 +1,2 @@
-/desafio_nginx_node/app/node_modules
-/desafio_nginx_node/mysql
+docker/desafio_nginx_node/mysql/
+docker/desafio_nginx_node/app/node_modules/
