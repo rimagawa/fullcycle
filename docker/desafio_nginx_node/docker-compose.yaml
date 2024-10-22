@@ -20,6 +20,8 @@ services:
       - node-network
     ports: 
       - "8080:80"
+    depends_on:
+      - db
   
   db:
     platform: linux/x86_64
@@ -27,8 +29,8 @@ services:
     container_name: db
     restart: always
     tty: true
-    # volumes: 
-    #   - ./mysql:/var/lib/mysql
+    volumes: 
+      - ./mysql:/var/lib/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: 'password'
       MYSQL_DATABASE: 'nodedb'
