@@ -16,6 +16,3 @@ RUN apt-get update \
 
 EXPOSE 4400
 
-CMD dockerize -timeout 30s -wait tcp://db:3306 && node app.js
-
-# CMD [ "node", "app.js" ]

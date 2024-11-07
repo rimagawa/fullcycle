@@ -5,6 +5,7 @@ services:
       context: ./app
       dockerfile: Dockerfile
     container_name: nodeapp
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 30s node app.js
     volumes:
       - ./app:/app
     networks: 
@@ -22,6 +23,8 @@ services:
       - node-network
     ports: 
       - "8080:80"
+    depends_on:
+      - node
   
   db:
     platform: linux/x86_64
