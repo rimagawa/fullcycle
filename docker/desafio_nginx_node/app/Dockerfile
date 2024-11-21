@@ -4,7 +4,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN apt-get update && apt-get install -y wget
 
 ENV DOCKERIZE_VERSION v0.8.0
 RUN apt-get update \
